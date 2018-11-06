@@ -15,12 +15,14 @@ class all_in_one_classes
     public $conn;
 
     function __construct(){
+        
+        //now to prevent SQL Injection, you must use PDO. PHP data object
         $this->conn = new mysqli($this->localhost,$this->username, $this->password,$this->dbName);
         if($this->conn->connect_error){
             die("connection fail: " . mysqli_connect_error());
         }
         else{
-            //echo"connected";
+            echo"connected";
         }
     }
 
