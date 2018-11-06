@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+//targeting session IDs
 <?php
 $id = $_SESSION['id'];
 $email = $_SESSION['userSession'];
